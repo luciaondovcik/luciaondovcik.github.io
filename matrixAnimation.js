@@ -3,7 +3,7 @@ window.onload = function() {
     const ctx = canvas.getContext('2d');
     canvas.height = 250;
   
-    const finalMessage = "BUDE SVADBA,\n,\n,\n,28.6.2025,\n,KAMENEC POD VTÁČNIKOM,\n,\n,\n,Michal a Lucka"; // Your final message
+    const finalMessage = "BUDE SVADBA,\n,\n,\n,28.6.2025,\n,KAMENEC POD VTÁČNIKOM,\n,\n,\n,Michal & Lucka";
     const fontSize = 14;
     const columns = Math.floor(canvas.width / fontSize);
     const messageLines = finalMessage.split(',');
@@ -13,12 +13,12 @@ window.onload = function() {
     let lastRevealTime = 0;
     
     const blinkInterval = 500;
-    let showCursor = true; // cursor visibility
+    let showCursor = true; 
     let lastBlinkTime = 0;
   
     // total height of the message
     const totalMessageHeight = messageLines.length * fontSize;
-    const startY = Math.floor((canvas.height - totalMessageHeight) / 2); // Center the message vertically
+    const startY = Math.floor((canvas.height - totalMessageHeight) / 2);
   
     function drawFinalMessage(currentTime) {
         // Clear the canvas for each frame
@@ -44,7 +44,7 @@ window.onload = function() {
             const lineLength = line.length;
   
             const messageStartCol = Math.floor((columns - lineLength) / 2);
-            const y = startY + (lineIndex * fontSize); // Correct vertical spacing
+            const y = startY + (lineIndex * fontSize); 
   
             // Reveal letters progressively for the current line
             for (let i = 0; i < Math.min(revealedLettersCount - totalRevealedLetters, lineLength); i++) {
@@ -64,12 +64,11 @@ window.onload = function() {
         }
     }
   
-    // Animation loop
     function animate(currentTime) {
         drawFinalMessage(currentTime);
         
         if (currentTime - lastBlinkTime >= blinkInterval) {
-            showCursor = !showCursor; // Toggle cursor visibility
+            showCursor = !showCursor; 
             lastBlinkTime = currentTime; // Reset the blink timer
         }
   
