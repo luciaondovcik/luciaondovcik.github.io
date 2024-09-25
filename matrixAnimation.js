@@ -3,7 +3,7 @@ window.onload = function() {
     const ctx = canvas.getContext('2d');
     canvas.height = 250;
   
-    const finalMessage = "BUDE SVADBA,\n,\n,\n,28.6.2025,\n,KAMENEC POD VTÁČNIKOM,\n,\n,~,\n,\n, Lucka a Michal"; // Your final message
+    const finalMessage = "BUDE SVADBA,\n,\n,\n,28.6.2025,\n,KAMENEC POD VTÁČNIKOM,\n,\n,\n,Michal a Lucka"; // Your final message
     const fontSize = 14;
     const columns = Math.floor(canvas.width / fontSize);
     const messageLines = finalMessage.split(',');
