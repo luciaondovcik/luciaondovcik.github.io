@@ -52,12 +52,11 @@ h2 {
 }
 
 #landing-page {
-  background-image: url('images/grand_kanon.jpg'); /* Replace with your image URL */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Center the image */
-  background-attachment: fixed; /* Optional: Makes the background image fixed while scrolling */
-  min-height: 100vh; /* Full screen height */
-  color: var(--bs-background); /* Make text color white for better contrast */
+  background-image: url('images/grand_kanon.jpg');
+  background-size: cover; 
+  background-position: center;
+  min-height: 100vh;
+  color: var(--bs-background);
   display: flex;
   flex-direction: column;
   justify-content: center;
